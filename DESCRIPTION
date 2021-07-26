@@ -1,0 +1,24 @@
+Package: DutchDayDummies
+Title: R-package to create regression dummies for dutch holidays
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Glenn",
+           family = "Hiemstra",
+           role = c("aut", "cre"),
+           email = "glenn.hiemstra@gmail.com",
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: This R-packages creates regression dummies for official and non-official dutch holidays. It includes virtually all holidays you can imagine, varying from Christmas, Easter and Ramadan to Mother's day, Black Friday and Summer vacation. 
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Imports: 
+    glue,
+    stringr,
+    lubridate,
+    tibble,
+    magrittr,
+    Rcpp
+LinkingTo: 
+    Rcpp
