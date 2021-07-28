@@ -17,10 +17,12 @@ knitr::opts_chunk$set(
 
 ```{r, echo = FALSE, results='asis'}
 cat(
-	badger::badge_devel("guangchuangyu/ggtree", "blue"),
+	badger::badge_devel("guangchuangyu/ggtree", "purple"),
 	badger::badge_codefactor("rossellhayes/ipa"),
 	badger::badge_lifecycle("maturing", "blue"),
-	badger::badge_github_actions("rossellhayes/ipa")
+	badger::badge_github_actions("rossellhayes/ipa"),
+	badger::badge_codecov("rcannood/princurve"),
+	badger::badge_code_size("GuangchuangYu/badger")
 )
 ```
 
