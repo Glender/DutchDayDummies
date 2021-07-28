@@ -26,8 +26,6 @@ cat(
 )
 ```
 
-## Overview
-
 The goal of the DutchDayDummies package is to provide functions that can quickly generate regression dummies for official and non-official dutch holidays. It includes virtually all existing (non-official) dutch holidays, varying from Christmas, Easter and Ramadan to Mother's day, Black Friday and Summer vacation. The functions that create the holiday dummies use algorithms to convert dates to dummies and thus don't require any input besides the to-be-converted date. 
 
 ## :arrow_double_down: Installation
