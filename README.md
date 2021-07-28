@@ -146,8 +146,7 @@ vacation dummies, and helper functions.
 ## :speech\_balloon: Help
 
 The documentation of all functions can be accessed by `?<function-name>`
-or navigate via the package documentation page
-`package?DutchDayDummies`.
+or navigate via the package documentation help page `?DutchDayDummies`.
 
     # For example:
     ?ummalqura_algorithm

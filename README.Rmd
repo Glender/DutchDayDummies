@@ -125,7 +125,7 @@ official holiday dummies, non-official holidays dummies, vacation dummies, and h
 
 ## :speech_balloon: Help
 
-The documentation of all functions can be accessed by `?<function-name>` or navigate via the package documentation page `package?DutchDayDummies`.
+The documentation of all functions can be accessed by `?<function-name>` or navigate via the package documentation help page `?DutchDayDummies`.
 ```
 # For example:
 ?ummalqura_algorithm

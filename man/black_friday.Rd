@@ -27,7 +27,7 @@ post argument to 1.
 }
 \examples{
 df <- tibble::tibble(
-dates = seq_days("2022-11-22", "2022-11-29"),
+dates = seq_days("2022-11-22", "2022-11-28"),
 blck_fday = black_friday(dates, country="US")
 )
 df
