@@ -15,9 +15,18 @@ knitr::opts_chunk$set(
 
 # DutchDayDummies
 
+```{r, echo = FALSE, results='asis'}
+cat(
+	badger::badge_devel("guangchuangyu/ggtree", "blue"),
+	badger::badge_codefactor("rossellhayes/ipa"),
+	badger::badge_lifecycle("maturing", "blue"),
+	badger::badge_github_actions("rossellhayes/ipa")
+)
+```
+
 ## Overview
 
-The goal of the DutchDayDummies package is to provide functions that can quickly generate regression dummies for official and non-official dutch holidays. It includes virtually all (non-official) holidays you can imagine, varying from Christmas, Easter and Ramadan to Mother's day, Black Friday and Summer vacation. The functions that create the holiday dummies use algorithms to convert dates to dummies and thus don't require any input besides the to-be-converted date. 
+The goal of the DutchDayDummies package is to provide functions that can quickly generate regression dummies for official and non-official dutch holidays. It includes virtually all existing (non-official) dutch holidays, varying from Christmas, Easter and Ramadan to Mother's day, Black Friday and Summer vacation. The functions that create the holiday dummies use algorithms to convert dates to dummies and thus don't require any input besides the to-be-converted date. 
 
 ## Installation
 

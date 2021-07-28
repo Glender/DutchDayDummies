@@ -3,12 +3,18 @@
 
 # DutchDayDummies
 
+[![](https://img.shields.io/badge/devel%20version-0.0.0.9000-blue.svg)](https://github.com/guangchuangyu/ggtree)
+[![CodeFactor](https://www.codefactor.io/repository/github/rossellhayes/ipa/badge)](https://www.codefactor.io/repository/github/rossellhayes/ipa)
+[![](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://lifecycle.r-lib.org/articles/stages.html#maturing)
+[![R build
+status](https://github.com/rossellhayes/ipa/workflows/R-CMD-check/badge.svg)](https://github.com/rossellhayes/ipa/actions)
+
 ## Overview
 
 The goal of the DutchDayDummies package is to provide functions that can
 quickly generate regression dummies for official and non-official dutch
-holidays. It includes virtually all (non-official) holidays you can
-imagine, varying from Christmas, Easter and Ramadan to Mother’s day,
+holidays. It includes virtually all existing (non-official) dutch
+holidays, varying from Christmas, Easter and Ramadan to Mother’s day,
 Black Friday and Summer vacation. The functions that create the holiday
 dummies use algorithms to convert dates to dummies and thus don’t
 require any input besides the to-be-converted date.
