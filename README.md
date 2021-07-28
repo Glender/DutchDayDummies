@@ -6,11 +6,11 @@
     #> ✓ Setting active project to '/home/glenn/Documents/Github/DutchDayDummies'
 
 [![](https://img.shields.io/badge/devel%20version-0.0.0.9000-purple.svg)](https://github.com/Glender/DutchDayDummies)
-[![CodeFactor](https://www.codefactor.io/repository/github/Glender/DutchDayDummies/badge)](https://www.codefactor.io/repository/github/Glender/DutchDayDummies)
+[![CodeFactor](https://www.codefactor.io/repository/github/rossellhayes/ipa/badge)](https://www.codefactor.io/repository/github/rossellhayes/ipa)
 [![](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://lifecycle.r-lib.org/articles/stages.html#maturing)
 [![R build
-status](https://github.com/Glender/DutchDayDummies/workflows/R-CMD-check/badge.svg)](https://github.com/Glender/DutchDayDummies/actions)
-[![](https://codecov.io/gh/Glender/DutchDayDummies/branch/master/graph/badge.svg)](https://codecov.io/gh/Glender/DutchDayDummies)
+status](https://github.com/rossellhayes/ipa/workflows/R-CMD-check/badge.svg)](https://github.com/rossellhayes/ipa/actions)
+[![](https://codecov.io/gh/rcannood/princurve/branch/master/graph/badge.svg)](https://codecov.io/gh/rcannood/princurve)
 [![](https://img.shields.io/github/languages/code-size/Glender/DutchDayDummies.svg)](https://github.com/Glender/DutchDayDummies)
 
 ## Overview
