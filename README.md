@@ -23,7 +23,7 @@ Black Friday and Summer vacation. The functions that create the holiday
 dummies use algorithms to convert dates to dummies and thus don’t
 require any input besides the to-be-converted date.
 
-## Installation
+## :arrow\_double\_down: Installation
 
 ``` r
 # Install the cutting edge development version from GitHub:
@@ -31,7 +31,7 @@ require any input besides the to-be-converted date.
 devtools::install_github("Glender/DutchDayDummies")
 ```
 
-## Usage
+## :book: Usage
 
 Start by creating daily dates that conform to our required format and
 then run a function like `xmas_day`:
@@ -73,7 +73,7 @@ tibble(
 #> 10 2022-01-02     0      0     0     0
 ```
 
-## Overview
+## :eyeglasses: Overview
 
 The DutchDayDummies package provides four categories of important
 functions: official holiday dummies, non-official holidays dummies,
@@ -147,7 +147,7 @@ vacation dummies, and helper functions.
   - `gauss_easter_algorithm(year)` tells you when easter falls on a
     given year.
 
-## Help
+## :speech\_balloon: Help
 
 The documentation of all functions can be accessed by `?<function-name>`
 or navigate via the package documentation page

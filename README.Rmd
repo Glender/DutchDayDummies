@@ -30,7 +30,7 @@ cat(
 
 The goal of the DutchDayDummies package is to provide functions that can quickly generate regression dummies for official and non-official dutch holidays. It includes virtually all existing (non-official) dutch holidays, varying from Christmas, Easter and Ramadan to Mother's day, Black Friday and Summer vacation. The functions that create the holiday dummies use algorithms to convert dates to dummies and thus don't require any input besides the to-be-converted date. 
 
-## Installation
+## :arrow_double_down: Installation
 
 ```r
 # Install the cutting edge development version from GitHub:
@@ -38,7 +38,7 @@ The goal of the DutchDayDummies package is to provide functions that can quickly
 devtools::install_github("Glender/DutchDayDummies")
 ```
 
-## Usage
+## :book: Usage
 
 Start by creating daily dates that conform to our required format and then run a function like `xmas_day`:
 
@@ -64,7 +64,7 @@ tibble(
 )
 ```
 
-## Overview
+## :eyeglasses: Overview
 
 The DutchDayDummies package provides four categories of important functions:
 official holiday dummies, non-official holidays dummies, vacation dummies, and helper functions.
@@ -125,7 +125,7 @@ official holiday dummies, non-official holidays dummies, vacation dummies, and h
 * `ummalqura_algorithm(date)` converts gregorian dates to Islamic dates. 
 * `gauss_easter_algorithm(year)` tells you when easter falls on a given year.
 
-## Help
+## :speech_balloon: Help
 
 The documentation of all functions can be accessed by `?<function-name>` or navigate via the package documentation page `package?DutchDayDummies`.
 ```
