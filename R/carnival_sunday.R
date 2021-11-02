@@ -19,13 +19,17 @@
 #')
 #'subset(df, carnival == 1)
 carnival_sunday <- function(dates, pre=0, post=0){
+
   # find the first carnivals day based on years
   years <- as.integer(unique(lubridate::year(dates)))
   carnival_dates <- sapply(years, gauss_easter_algorithm_Cpp)
+
   # subtract two days to shift to carnivals thursday
   carnival_dates <- as.Date(carnival_dates, format = "%Y-%m-%d") - 49
+
   # add the holiday as dummies in your df
   carnival_dates <- add_intervals(carnival_dates, pre=pre, post=post)
+
   # add the holiday as dummies in your df
   output <- add_holiday_dummies(dates, carnival_dates)
   return(output)

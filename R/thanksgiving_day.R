@@ -21,10 +21,12 @@
 #'df
 thanksgiving_day <- function(dates, pre=0, post=0, country="US"){
   if(country=="US"){
+
     # In the U.S., thanksgiving falls on the 4th thursday of November
     thanksgiving_dates <- nth_weekday_of_a_month(dates, nth = 4, weekday = 5, month = 11) %>%
       add_intervals(pre=pre, post=post)
   } else if(country=="Canada"){
+
     # In Canada, it falls on the second monday of October
     thanksgiving_dates <- nth_weekday_of_a_month(dates, nth = 2, weekday = 2, month = 10) %>%
       add_intervals(pre=pre, post=post)

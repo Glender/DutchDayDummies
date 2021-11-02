@@ -20,12 +20,15 @@
 #'    kday = kings_day(dates)
 #')
 kings_day <- function(dates, pre=0, post=0){
+
   # create kday and qday dates from 1949 to 2025
   kday_dates <- "20[1][4-9]-04-27|20[2-9][0-9]-04-27"
   qday_dates <- "19[4-9][9]-04-30|19[5-9][0-9]-04-30|200[0-9]-04-30|20[0-1][0-3]-04-30"
+
   kdates_regexp <- paste(kday_dates, qday_dates, sep="|")
   holiday_dates <- find_dates(dates, kdates_regexp) %>%
     add_intervals(pre=pre, post=post)
+
   # create new column and recode holidays
   vector <- add_holiday_dummies(dates, holiday_dates)
   return(vector)

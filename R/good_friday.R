@@ -19,12 +19,15 @@
 #')
 #'print(df)
 good_friday <- function(dates, pre=0, post=0){
+
   # find `Goede vrijdag` based on years
   years <- as.integer(unique(lubridate::year(dates)))
   easter_dates <- sapply(years, gauss_easter_algorithm_Cpp)
+
   # subtract two days to shift to friday
   easter_dates <- as.Date(easter_dates) - 2
   easter_dates <- add_intervals(easter_dates, pre=pre, post=post)
+
   # add the holiday as dummies in your df
   output <- add_holiday_dummies(dates, easter_dates)
   return(output)

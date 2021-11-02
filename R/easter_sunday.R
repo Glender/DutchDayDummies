@@ -19,11 +19,14 @@
 #')
 #'subset(df, easter_sun == 1)
 easter_sunday <- function(dates, pre=0,post=0){
+
   # easter sunday is called `1e paasdag` in dutch
   years <- as.integer(unique(lubridate::year(dates)))
+
   # cacluates on which day of the year easter day falls
   easter_dates <- as.Date(sapply(years, gauss_easter_algorithm_Cpp)) %>%
     add_intervals(pre = pre, post = post)
+
   # create new column and recode holidays
   vector <- add_holiday_dummies(dates, easter_dates)
   return(vector)

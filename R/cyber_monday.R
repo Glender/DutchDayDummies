@@ -20,6 +20,7 @@
 #')
 #'df
 cyber_monday <- function(dates, pre=0, post=0, country="US"){
+
   if(country=="US"){
     # In the U.S., thanksgiving falls on the 4th thursday of November
     thanksgiving_dates <- nth_weekday_of_a_month(dates, nth = 4, weekday = 5, month = 11)
@@ -32,6 +33,7 @@ cyber_monday <- function(dates, pre=0, post=0, country="US"){
   # Black friday falls on one day after thanksgiving
   cyber_monday_dates <- as.Date(thanksgiving_dates, format = "%Y-%m-%d") + 4
   cyber_monday_dates <- add_intervals(cyber_monday_dates, pre=pre, post=post)
+
   output <- add_holiday_dummies(dates, cyber_monday_dates)
   return(output)
 }

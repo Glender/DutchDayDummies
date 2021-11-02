@@ -19,8 +19,10 @@
 #'animal_day=world_animal_day(dates)
 #')
 world_animal_day <- function(dates, pre=0, post=0){
+
   holiday_dates <- find_dates(dates, "10-04$") %>%
     add_intervals(pre=pre, post=post)
+
   # create new column and recode holidays
   vector <- add_holiday_dummies(dates, holiday_dates)
   return(vector)

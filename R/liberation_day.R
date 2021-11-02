@@ -18,11 +18,13 @@
 #'    dates,
 #'    lib_day = liberation_day(dates)
 #')
-liberation_day <- function(dates, pre=0,post=0){
+liberation_day <- function(dates, pre=0, post=0){
+
   # In dutch: bevrijdingsdag
   lib_day_regex <- "19[4-9][5-9]-05-05|19[5-9].-05-05|2...-05-05"
   holiday_dates <- find_dates(dates, lib_day_regex) %>%
     add_intervals(pre=pre, post=post)
+
   # create new column and recode holidays
   vector <- add_holiday_dummies(dates, holiday_dates)
   return(vector)

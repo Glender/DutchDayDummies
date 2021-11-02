@@ -19,14 +19,17 @@
 #')
 #'print(df)
 pentecost_days <- function(dates, pre=0, post=0){
+
   # Including both white sunday & monday
   years <- as.integer(unique(lubridate::year(dates)))
   easter_dates <- sapply(years, gauss_easter_algorithm_Cpp)
+
   # convert easter days to white sunday and monday
   w_sundays <- as.Date(easter_dates, format = "%Y-%m-%d") + 49
   w_mondays <- as.Date(easter_dates, format = "%Y-%m-%d") + 50
   easter_dates <- c(w_sundays, w_mondays) %>%
     add_intervals(pre=pre, post=post)
+
   # add both days to your dataset in the form of dummy variables
   output <- add_holiday_dummies(dates, easter_dates)
   return(output)

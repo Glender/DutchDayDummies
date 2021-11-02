@@ -11,6 +11,7 @@
 #'# Confirm
 #'weekdays(as.Date(date_of_monday))
 get_wday_before_dates <- function(weekday, dates, search = "before"){
+
   # Example: give the dates of the mondays after christmas day, the 25th
   years <- unique(lubridate::year(dates))
   seq_of_dates <- seq_days(
@@ -26,9 +27,11 @@ get_wday_before_dates <- function(weekday, dates, search = "before"){
   day_search_dates <- vector("character", length = length(dates))
   for(date in seq_along(dates)){
     idx <- which(seq_of_dates == dates[date])
+
     # change indices depending on search argument
     if(search=="before") idx_to_search <- (idx-1):(idx-7)
     if(search=="after") idx_to_search <- (idx+1):(idx+7)
+
     # grab the weekday before a date
     day_ <- seq_of_dates[idx_to_search][
       which(lubridate::wday(seq_of_dates[idx_to_search])==switch_weekday(weekday))

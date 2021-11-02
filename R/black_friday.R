@@ -20,6 +20,7 @@
 #')
 #'df
 black_friday <- function(dates, pre=0, post=0, country="US"){
+
   if(country=="US"){
     # In the U.S., thanksgiving falls on the 4th thursday of November
     thanksgiving_dates <- nth_weekday_of_a_month(dates, nth = 4, weekday = 5, month = 11)
@@ -29,10 +30,12 @@ black_friday <- function(dates, pre=0, post=0, country="US"){
   } else {
     stop("country must be `US` or `Canada`.", call.=FALSE)
   }
+
   # Black friday falls on one day after thanksgiving
   black_friday_dates <- as.Date(thanksgiving_dates, format = "%Y-%m-%d") + 1
-  # add intervals
+
   black_friday_dates <- add_intervals(black_friday_dates, pre=pre, post=post)
   output <- add_holiday_dummies(dates, black_friday_dates)
+
   return(output)
 }

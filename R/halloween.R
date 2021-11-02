@@ -19,8 +19,10 @@
 #'hween=halloween(dates)
 #')
 halloween <- function(dates, pre=0, post=0){
+
   halloween_dates <- find_dates(dates, "10-31$") %>%
     add_intervals(pre=pre, post=post)
+
   # create new column and recode holidays
   vector <- add_holiday_dummies(dates, halloween_dates)
   return(vector)

@@ -19,9 +19,11 @@
 #')
 #'df
 fathers_day <- function(dates, pre=0, post=0){
+
   # fathers day falls on the third sunday of june
   fathers_day_dates <- nth_weekday_of_a_month(dates, nth = 3, weekday = 1, month = 6) %>%
     add_intervals(pre=pre, post=post)
+
   # convert father's day dates to dummies
   output <- add_holiday_dummies(dates, fathers_day_dates)
   return(output)

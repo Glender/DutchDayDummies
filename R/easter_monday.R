@@ -19,12 +19,15 @@
 #')
 #'subset(df, easter_mon == 1)
 easter_monday <- function(dates, pre=0, post=0){
+
   # find easter sunday (`2e paasdag`) day based on years
   years <- as.integer(unique(lubridate::year(dates)))
   easter_dates <- sapply(years, gauss_easter_algorithm_Cpp)
+
   # shift to easter monday instead of easter sunday
   easter_dates <- as.Date(easter_dates, format = "%Y-%m-%d") + 1
   easter_dates <- add_intervals(easter_dates, pre=pre, post=post)
+
   # add the holiday as dummies in your df
   output <- add_holiday_dummies(dates, easter_dates)
   return(output)

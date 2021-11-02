@@ -19,8 +19,10 @@
 #')
 #'#View(df)
 xmas_vacation <- function(dates, pre=0, post=0){
+
   # get christmas dates
   xmas_dates <- find_dates(dates, "-12-25$")
+
   # loop through each date
   bin <- vector("character", length = length(xmas_dates))
   for(date in seq_along(xmas_dates)){
@@ -37,7 +39,9 @@ xmas_vacation <- function(dates, pre=0, post=0){
   }
   # extend the dates to get the entire vacation period
   xmas_vacation_days <- add_intervals(as.Date(bin), pre = 2 + pre, post = 13 + post)
+
   # return binary dummies
   dummies <- add_holiday_dummies(dates, xmas_vacation_days)
+
   return(dummies)
 }

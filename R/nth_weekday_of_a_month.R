@@ -12,9 +12,11 @@
 #'# Mother's day falls on the second sunday of may, thus:
 #'nth_weekday_of_a_month(dates, nth = 2, weekday = 1, month = 5)
 nth_weekday_of_a_month <- function(dates, nth, weekday, month){
+
   # create sequence of days
   years <- as.integer(unique(lubridate::year(dates)))
   year_dates <- paste0(years, "-01-01")
+
   if(length(years)>1){
     day_dates <- seq_days(
       from = year_dates[1],
@@ -31,6 +33,7 @@ nth_weekday_of_a_month <- function(dates, nth, weekday, month){
     dates = as.character(day_dates),
     years = as.integer(lubridate::year(day_dates)),
     months = lubridate::month(day_dates),
+
     # For the weekdays, sunday counts as 1, saturday as 7, etc.
     weekdays = lubridate::wday(day_dates),
     stringsAsFactors = FALSE
@@ -39,6 +42,7 @@ nth_weekday_of_a_month <- function(dates, nth, weekday, month){
   df <- subset(df, months == month & weekdays == weekday)
   l <- split(df, df$years)
   l <- lapply(l, function(x) {x[nth,1]})
+
   holiday_dates <- unname(unlist(l))
   return(holiday_dates)
 }

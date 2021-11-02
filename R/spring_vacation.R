@@ -19,16 +19,19 @@
 #')
 #'#View(df)
 spring_vacation <- function(dates, pre=0, post=0){
+
   # get carnaval date
   years <- as.integer(unique(lubridate::year(dates)))
   carnival_dates <- sapply(years, gauss_easter_algorithm_Cpp)
   carnival_dates <- as.Date(carnival_dates, format = "%Y-%m-%d") - 49
   weeknr_carnaval <- as.integer(strftime(carnival_dates, format = "%V"))
+
   # get vacation dates
   weeknr <- as.integer(strftime(dates, format = "%V"))
   weekday <- lubridate::wday(dates)
   vacation_dates <- dates[weeknr == 7 & weekday == 7]
   vacation_dates_adjusted <- dates[weeknr == 6 & weekday == 7]
+
   # if carnaval is in week 6, the vacation also starts that week
   vacation_dates <- ifelse(
     weeknr_carnaval == 6,
@@ -36,6 +39,7 @@ spring_vacation <- function(dates, pre=0, post=0){
     as.character(vacation_dates)
   )
   vacation_dates <- add_intervals(as.Date(vacation_dates), pre=pre, post=15+post)
+
   # create dummies from vacation dates
   vector <- add_holiday_dummies(dates, vacation_dates)
   return(vector)

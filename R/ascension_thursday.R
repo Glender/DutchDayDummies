@@ -19,12 +19,15 @@
 #')
 #'print(df)
 ascension_thursday <- function(dates, pre=0, post=0){
+
   # find  'Hemelvaartdag' based on years
   years <- as.integer(unique(lubridate::year(dates)))
   easter_dates <- sapply(years, gauss_easter_algorithm_Cpp)
+
   # add days to shift to ascension thurday
   easter_dates <- as.Date(easter_dates, format = "%Y-%m-%d") + 39
   easter_dates <- add_intervals(easter_dates, pre=pre, post=post)
+
   # add the holiday as dummies in your df
   output <- add_holiday_dummies(dates, easter_dates)
   return(output)

@@ -29,9 +29,13 @@ when_is_sugar_feast <- function(years){
 #'    eid_al_fitr = sugar_feast(dates)
 #')
 sugar_feast <- function(dates, pre=0, post=0){
+
   years <- as.integer(unique(lubridate::year(dates)))
+
   holiday_dates <- when_is_sugar_feast(years)
   holiday_dates <- add_intervals(holiday_dates, pre=pre, post=post)
+
   vector <- add_holiday_dummies(dates, holiday_dates)
+
   return(vector)
 }

@@ -21,8 +21,10 @@
 #'    nyd = newyears_day(dates)
 #')
 newyears_day <- function(dates, pre=0,post=0){
+
   holiday_dates <- find_dates(dates, "01-01$") %>%
     add_intervals(pre=pre, post=post)
+
   # create new column and recode holidays
   vector <- add_holiday_dummies(dates, holiday_dates)
   return(vector)
@@ -49,8 +51,10 @@ newyears_day <- function(dates, pre=0,post=0){
 #'    nye = newyears_eve(dates)
 #')
 newyears_eve <- function(dates, pre=0, post=0){
+
   holiday_dates <- find_dates(dates, "12-31$") %>%
     add_intervals(pre=pre, post=post)
+
   # create new column and recode holidays
   vector <- add_holiday_dummies(dates, holiday_dates)
   return(vector)

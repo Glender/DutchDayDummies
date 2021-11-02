@@ -19,8 +19,10 @@
 #')
 #'subset(df, sinterklaas == 1)
 st_nicholas_day <- function(dates, pre=0, post=0){
+
   holiday_dates <- find_dates(dates, "12-05$") %>%
     add_intervals(pre=pre, post=post)
+
   # create new column and recode holidays
   vector <- add_holiday_dummies(dates, holiday_dates)
   return(vector)

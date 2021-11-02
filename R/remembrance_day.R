@@ -19,10 +19,12 @@
 #'    remem_day = remembrance_day(dates)
 #')
 remembrance_day <- function(dates, pre=0,post=0){
+
   # In dutch: dodenherdenking
   rem_day_regex <- "19[4-9][5-9]-05-04|19[5-9].-05-04|2...-05-04"
   holiday_dates <- find_dates(dates, rem_day_regex) %>%
     add_intervals(pre=pre, post=post)
+
   # create new column and recode holidays
   vector <- add_holiday_dummies(dates, holiday_dates)
   return(vector)

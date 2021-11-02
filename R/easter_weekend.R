@@ -19,13 +19,16 @@
 #')
 #'subset(df, easter_wknd == 1)
 easter_weekend <- function(dates, pre=0,post=0){
+
   # filter years and cacluate on which day of the year easter day falls
   years <- as.integer(unique(lubridate::year(dates)))
   easter_sundays <- sapply(years, gauss_easter_algorithm_Cpp)
+
   # add one to shift from sunday to monday
   easter_mondays <- as.Date(easter_sundays, format = "%Y-%m-%d") + 1
   easter_dates <- c(as.Date(easter_sundays, format = "%Y-%m-%d"), easter_mondays) %>%
     add_intervals(pre=pre, post=post)
+
   # add those days to your dataframe in dummy format
   output <- add_holiday_dummies(dates, easter_dates)
   return(output)

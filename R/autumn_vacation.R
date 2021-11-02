@@ -19,12 +19,14 @@
 #')
 #'#View(df)
 autumn_vacation <- function(dates, pre = 0 , post = 0){
+
   # The autumn vacation presumably falls on the saturday of week 41
   weeknr <- as.integer(strftime(dates, format = "%V"))
   weekday <- lubridate::wday(dates)
   autumn_vacation_dates <- dates[weeknr == 41 & weekday == 7] %>%
     add_intervals(pre=pre, post=15+post) %>%
     sort()
+
   # create dummies from vacation dates
   vector <- add_holiday_dummies(dates, autumn_vacation_dates)
   return(vector)

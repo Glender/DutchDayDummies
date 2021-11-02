@@ -20,12 +20,14 @@
 #')
 #'subset(df, payday == 1)
 payment_days <- function(dates, pre = 0, post = 0){
+
   # take the 25th of each month, except for december which is 23th
   regex_patterns <- c(
     "-0[1-9]-25$|-1[0-1]-25$|-12-23$"
   )
   payment_dates <- find_dates(dates, regex_patterns) %>%
     add_intervals(pre=pre, post=post)
+
   # create new column and recode holidays
   dummy_vector <- add_holiday_dummies(dates, payment_dates)
   return(dummy_vector)

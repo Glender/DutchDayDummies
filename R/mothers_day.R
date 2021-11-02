@@ -19,9 +19,11 @@
 #')
 #'subset(df, mum_day == 1)
 mothers_day <- function(dates, pre=0, post=0){
+
   # mother's day falls on the second sunday of may, thus:
   mothers_day_dates <- nth_weekday_of_a_month(dates, nth = 2, weekday = 1, month = 5) %>%
     add_intervals(pre=pre, post=post)
+
   # convert mother's day dates to dummies
   output <- add_holiday_dummies(dates, mothers_day_dates)
   return(output)

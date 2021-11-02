@@ -19,8 +19,3 @@ ummalqura_algorithm <- function(date){
   )
   return(idate)
 }
-
-
-
-
-

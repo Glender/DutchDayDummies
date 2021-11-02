@@ -34,9 +34,11 @@ validate_seq_days <- function(date){
 #' # Create a time series by days:
 #' seq_days(from = "2020-1-1", to = "2021-12-31")
 seq_days <- function(from, to){
+
   # stop if not in right format
   validate_seq_days(from)
   validate_seq_days(to)
+
   # create day vector
   date <- seq(
     from=as.Date(from, format = "%Y-%m-%d"),

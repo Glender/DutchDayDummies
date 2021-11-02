@@ -83,9 +83,11 @@ boxing_day <- function(dates, pre=0, post=0){
 #'    box_day = boxing_day(dates, pre = 0, post = 0)
 #')
 xmas_and_boxing_day <- function(dates, pre=0, post=0){
+
   # find the xmas days; add pre-post-intervals
   holiday_dates <- find_dates(dates, "12-25$|12-26$") %>%
     add_intervals(pre=pre, post=post)
+
   # create new column and recode holidays
   vector <- add_holiday_dummies(dates, holiday_dates)
   return(vector)
