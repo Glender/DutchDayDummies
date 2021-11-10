@@ -13,6 +13,9 @@ find_dates <- function(date_vector, date_regex){
 }
 
 # recreate dates in a year and add intervals
+# for each date, create a new date that shifts
+# the date j with i backwards/forewards.
+# Do that for each x desired shift (pre/post)
 add_intervals <- function(holiday_dates, pre, post){
   pre_dates <- c()
   if(pre > 0){
