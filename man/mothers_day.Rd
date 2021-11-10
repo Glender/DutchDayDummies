@@ -26,7 +26,7 @@ post argument to 1.
 \examples{
 df <- tibble::tibble(
 dates = seq_days("2022-5-1", "2022-5-31"),
-mum_day = mothers_day(dates, pre=0,post=0)
+mum_day = mothers_day(dates, pre=0,post=1)
 )
 subset(df, mum_day == 1)
 }

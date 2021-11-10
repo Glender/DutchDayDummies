@@ -26,7 +26,7 @@ post argument to 1.
 \examples{
 df <- tibble::tibble(
 dates = seq_days("2022-6-14", "2022-6-24"),
-dad_day = fathers_day(dates, pre=0,post=0)
+dad_day = fathers_day(dates, pre=1,post=0)
 )
 df
 }

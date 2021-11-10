@@ -15,15 +15,16 @@
 #' @examples
 #'df <- tibble::tibble(
 #'dates = seq_days("2022-6-14", "2022-6-24"),
-#'dad_day = fathers_day(dates, pre=0,post=0)
+#'dad_day = fathers_day(dates, pre=1,post=0)
 #')
 #'df
 fathers_day <- function(dates, pre=0, post=0){
 
   # fathers day falls on the third sunday of june
-  fathers_day_dates <- nth_weekday_of_a_month(dates, nth = 3, weekday = 1, month = 6) %>%
-    add_intervals(pre=pre, post=post)
-
+  fathers_day_dates <- nth_weekday_of_a_month(dates, nth = 3, weekday = 1, month = 6)
+  fathers_day_dates <- add_intervals(
+    as.Date(fathers_day_dates), pre=pre, post=post
+  )
   # convert father's day dates to dummies
   output <- add_holiday_dummies(dates, fathers_day_dates)
   return(output)
