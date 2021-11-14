@@ -1,7 +1,8 @@
 #' DutchDayDummies: A package for computing regression dummies for dutch holidays.
 #'
 #' The DutchDayDummies package provides four categories of important functions:
-#' official dutch holidays, non-official dutch holidays, vacations and helper-functions.
+#' official dutch holidays, non-official dutch holidays, vacations, holiday weekends,
+#' payment days and helper-functions.
 #'
 #' @section Official dutch holidays:
 #' \code{\link[DutchDayDummies]{newyears_day}} \cr
@@ -18,7 +19,6 @@
 #' \code{\link[DutchDayDummies]{valentines_day}} \cr
 #' \code{\link[DutchDayDummies]{good_friday}} \cr
 #' \code{\link[DutchDayDummies]{ramadan}} \cr
-#' \code{\link[DutchDayDummies]{kings_day}} \cr
 #' \code{\link[DutchDayDummies]{remembrance_day}} \cr
 #' \code{\link[DutchDayDummies]{liberation_day}} \cr
 #' \code{\link[DutchDayDummies]{sugar_feast}} \cr
@@ -34,15 +34,27 @@
 #' \code{\link[DutchDayDummies]{st_nicholas_day}} \cr
 #' \code{\link[DutchDayDummies]{newyears_eve}} \cr
 #'
-#' @section Vacations and holiday weekends:
+#' @section Vacations:
 #' \code{\link[DutchDayDummies]{autumn_vacation}} \cr
 #' \code{\link[DutchDayDummies]{xmas_vacation}} \cr
 #' \code{\link[DutchDayDummies]{spring_vacation}} \cr
 #' \code{\link[DutchDayDummies]{may_vacation}} \cr
 #' \code{\link[DutchDayDummies]{summer_vacation}} \cr
+#'
+#' @section Holiday weekends:
 #' \code{\link[DutchDayDummies]{xmas_and_boxing_day}} \cr
 #' \code{\link[DutchDayDummies]{pentecost_days}} \cr
 #' \code{\link[DutchDayDummies]{easter_weekend}} \cr
+#'
+#' @section Payment Days:
+#' \code{\link[DutchDayDummies]{payment_days}} \cr
+#'
+#' @section Retrieving multiple holidays:\cr
+#' \code{\link[DutchDayDummies]{load_all_days}} \cr
+#' \code{\link[DutchDayDummies]{official_holidays}} \cr
+#' \code{\link[DutchDayDummies]{non_official_holidays}} \cr
+#' \code{\link[DutchDayDummies]{holiday_vacations}} \cr
+#' \code{\link[DutchDayDummies]{holiday_weekends}} \cr
 #'
 #' @section Helper functions:
 #' \code{\link[DutchDayDummies]{seq_days}} \cr

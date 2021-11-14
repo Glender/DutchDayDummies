@@ -1,6 +1,6 @@
 Package: DutchDayDummies
 Title: R-package to create regression dummies for dutch holidays
-Version: 0.0.0.9000
+Version: 1.0.1
 Authors@R: 
     person(given = "Glenn",
            family = "Hiemstra",
