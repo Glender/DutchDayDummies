@@ -75,6 +75,7 @@ payment days and helper-functions.
 
 \section{Helper functions}{
 
+\code{\link[DutchDayDummies]{next_holiday}} \cr
 \code{\link[DutchDayDummies]{seq_days}} \cr
 \code{\link[DutchDayDummies]{create_dummy}} \cr
 \code{\link[DutchDayDummies]{nth_weekday_of_a_month}} \cr

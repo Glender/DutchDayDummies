@@ -35,7 +35,7 @@ validate_dates <- function(dates){
 #' df
 official_holidays <- function(dates){
   # create dataframe with all official dutch holidays
-  validate_dates(dates)
+  suppressWarnings(validate_dates(dates))
   df <- tibble::tibble(
     "off.New.Years.Day" = newyears_day(dates),
     "off.Easter.Sunday" = easter_sunday(dates),
@@ -82,7 +82,7 @@ official_holidays <- function(dates){
 #' df <- non_official_holidays(dates)
 #' df
 non_official_holidays <- function(dates){
-  validate_dates(dates)
+  suppressWarnings(validate_dates(dates))
   df <- tibble::tibble(
     "non.off.Carnival.Sunday" = carnival_sunday(dates),
     "non.off.Valentines.Day" = valentines_day(dates),
@@ -126,7 +126,7 @@ non_official_holidays <- function(dates){
 #' df <- holiday_vacations(dates)
 #' df
 holiday_vacations <- function(dates){
-  validate_dates(dates)
+  suppressWarnings(validate_dates(dates))
   df <- tibble::tibble(
   "vacation.Autunn" = autumn_vacation(dates),
   "vacation.Xmas" = xmas_vacation(dates),
@@ -155,7 +155,7 @@ holiday_vacations <- function(dates){
 #' df <- holiday_weekends(dates)
 #' df
 holiday_weekends <- function(dates){
-  validate_dates(dates)
+  suppressWarnings(validate_dates(dates))
   df <- tibble::tibble(
     "wknd.Xmas" = xmas_and_boxing_day(dates),
     "wknd.Pentecost" = pentecost_days(dates),
@@ -176,8 +176,6 @@ holiday_weekends <- function(dates){
 #' df <- load_all_days(dates)
 #' df
 load_all_days <- function(dates){
-
-  validate_dates(dates)
 
   # retrieve multiple holidays
   off <- official_holidays(dates)
