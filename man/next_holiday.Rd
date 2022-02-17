@@ -4,10 +4,10 @@
 \alias{next_holiday}
 \title{Find the number of days until the next holiday.}
 \usage{
-next_holiday()
+next_holiday(date = lubridate::today())
 }
 \value{
-character
+list
 }
 \description{
 Find the number of days until the next holiday.

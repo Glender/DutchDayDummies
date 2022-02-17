@@ -1,5 +1,5 @@
 .onAttach <- function(libname, pkgname) {
   packageStartupMessage(
-    next_holiday()
+    show_upcoming_holidays()
   )
 }
